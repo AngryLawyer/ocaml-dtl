@@ -1,0 +1,12 @@
+OASISFormat: 0.4
+Name:        OCaml DTL
+Version:     0.1
+Synopsis:    A port of Django Template Language
+Authors:     Tony Aldridge
+License:     MIT
+
+Library ocamldtl
+  Path:         ./src
+  BuildTools:   ocamlbuild
+  BuildDepends: core, omd
+  Modules:      Lexer, Parser, Evaluator
