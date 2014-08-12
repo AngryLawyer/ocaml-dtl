@@ -1,5 +1,5 @@
 # OASIS_START
-# DO NOT EDIT (digest: ff7e2ae2bfb67943aec25d011efffc85)
+# DO NOT EDIT (digest: f7adf2f0d6a7782f9e04c34763cc4471)
 # Ignore VCS directories, you can use the same kind of rule outside
 # OASIS_START/STOP if you want to exclude directories that contains
 # useless stuff for the build process
@@ -19,4 +19,15 @@
 <src/*.ml{,i}>: pkg_omd
 <src/*.ml{,i}>: pkg_re
 <src/*.ml{,i}>: pkg_yojson
+# Executable dtl_tests
+<tests/test.{native,byte}>: pkg_core
+<tests/test.{native,byte}>: pkg_omd
+<tests/test.{native,byte}>: pkg_re
+<tests/test.{native,byte}>: pkg_yojson
+<tests/test.{native,byte}>: use_ocamldtl
+<tests/*.ml{,i}>: pkg_core
+<tests/*.ml{,i}>: pkg_omd
+<tests/*.ml{,i}>: pkg_re
+<tests/*.ml{,i}>: pkg_yojson
+<tests/*.ml{,i}>: use_ocamldtl
 # OASIS_STOP
