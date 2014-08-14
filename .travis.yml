@@ -7,7 +7,7 @@ before_script:
   - opam init
   - eval `opam config env`
   - opam install oasis
-  - opam install core omd re yojson ounit
+  - opam install core omd re yojson ounit ocamlfind
   - oasis setup
   - ocaml setup.ml -configure
 script:
