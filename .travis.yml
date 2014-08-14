@@ -6,6 +6,7 @@ before_script:
   - export OPAMYES=1
   - opam init
   - opam install oasis
+  - opam install core omd re yojson ounit
   - eval `opam config env`
   - oasis setup
   - ocaml setup.ml -configure
