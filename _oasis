@@ -9,17 +9,18 @@ AlphaFeatures: ocamlbuild_more_args
 Library "ocamldtl"
   Path:         ./src
   BuildTools:   ocamlbuild
-  BuildDepends: core, omd, yojson, re
+  BuildDepends: core, omd, yojson, re, re.str, re.emacs
   Modules:      Lexer, Parser, Evaluator
 
 Executable "dtl_tests"
   Path: tests
   BuildTools: ocamlbuild
   MainIs: test.ml
-  BuildDepends: core, omd, yojson, re, ocamldtl
+  Install: false
+  BuildDepends: core, omd, yojson, re, ocamldtl, oUnit, re.str, re.emacs
   CompiledObject: best
 
 Test "dtl_tests"
-  Command: dtl_tests
+  Command: $dtl_tests
 
 XOCamlbuildExtraArgs: -use-ocamlfind -classic-display -syntax camlp4o -pkg core -pkg sexplib.syntax,comparelib.syntax,fieldslib.syntax,variantslib.syntax -pkg bin_prot.syntax -tag thread -tag debug -tag annot -tag bin_annot -tag short_paths
