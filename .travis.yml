@@ -5,9 +5,9 @@ before_script:
   - sudo apt-get install -qq ocaml ocaml-native-compilers camlp4-extra opam
   - export OPAMYES=1
   - opam init
+  - eval `opam config env`
   - opam install oasis
   - opam install core omd re yojson ounit
-  - eval `opam config env`
   - oasis setup
   - ocaml setup.ml -configure
 script:
