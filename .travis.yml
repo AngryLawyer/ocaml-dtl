@@ -9,7 +9,7 @@ before_script:
   - opam install oasis
   - opam install core omd re yojson ounit ocamlfind
   - oasis setup
-  - ocaml setup.ml -configure
+  - ocaml setup.ml -configure --prefix /home/travis/.opam/system
 script:
   - ocaml setup.ml -build
   - ocaml setup.ml -test
